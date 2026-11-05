@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+     
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <h1>AnastasiaStore</h1>
+    </div>
+
+    <nav class="menu">
+        <a href="#">INICIO</a>
+        <a href="#">NEW AW2026</a>
+        <a href="#">ACCESORIOS</a>
+        <a href="#">CARRITO</a>
+    </nav>
+</header>
+<header>
+<section class="hero">
+  <img src="img/Diseño sin título (4).png" alt="Nueva temporada">
+  <div class="overlay">
+  <h1>NUEVA TEMPORADA</h1>
+  <a href="#" class="btn-ver">VER MÁS</a>
+  </div>
+</section>
+</header>
+<script src="script.js"></script>
+
+<section class="grid-categorias">
+
+    <div class="contenedor-categorias">
+
+        <a href="#ropa" class="tarjeta">
+    <img src="img/imagen 8.jpeg" alt="Categoría Ropa">
+       <span>ROPA</span>
+  </a>
+
+  <a href="#accesorios" class="tarjeta">
+    <img src="img/Imagen 3.jpeg" alt="Categoría Accesorios">
+    <span>ACCESORIOS</span>
+  </a>
+
+  <a href="#lentes" class="tarjeta">
+    <img src="img/Chica con lentes.webp" alt="Categoría Lentes">
+    <span>LENTES</span>
+  </a>
+  </div>
+  
+  <style>
+    /* Categorías */
+.contenedor-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+
+.tarjeta {
+    width: 485px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta span {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+  </style>
+   
+ 
+
+   
+
+
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+    .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e63e70;
+    padding: 15px 30px;
+}
+
+.logo h1 {
+    color: white;
+    font-family: Arial;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: Arial;
+    transition: 0.3s;
+}
+
+</style>
+
+<style>
+
+    .card img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    
+    }
+
+    
+    
+
+
+
+</style>
+
+
+<style>
+    
+    .logo { 
+        text-align:center;
+        font-family: Arial,sans-serif;
+        letter-spacing: 2px; 
+    }
+    {
+        display : flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        gap: 20px;
+    }
+    {
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+    .menu a:hover {
+      color:gray;
+    }
+
+    .contenedor-productos{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+     }
+
+     .producto{
+        width: 100px;
+        text-align: center;
+        border: 1px solid #ddd;
+        padding: 10px;
+     }
+
+      .producto img{
+        width: 100%;
+        height: auto;
+      }
+
+    body {
+        background: #f5f5f5;
+        font-family: Arial;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    padding:20 px;
+
+    .search {
+        display: flex;
+        justify-content: center;
+    }
+
+    .search input {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .producto {
+        background: white;
+        padding: 10px;
+        border-radius: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .producto img {
+        width: 100%;
+    }
+
+    .precio {
+        color: rgb(252, 85, 154);
+        font-weight: bold;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .producto {
+        background: white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 8px;
+    }
+    .producto {
+    width: 250px;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.slider {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Overlay ya lo tenías */
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-texto {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: white;
+    font-weight: bold;
+    background: rgba(0,0,0,0.4);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXTO ENCIMA */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.overlay h1 {
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.btn-ver {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 3px;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+
+.anuncios img {
+    width: 50%;
+    max-width: 50px; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+.anuncios {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.anuncios img {
+    width: 90%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px; 
+}
+
+
+    
+.contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.contenedor-imagenes img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.imagen-pequeña {
+    width: 150px;
+    height: auto;
+  }
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+  .galeria{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+     }
+
+  .card img{
+        width: 300px;
+        height: auto;
+      }
+
+ .barra {
+     display: none;
+}
+nav{
+    display: none;
+}
+
+  
+
+</style>
+
+
+
+
+</script>
+
+<body>
+    <header>
+
+        <h1>Articulos Destacados</h1>
+
+        <div class="search">
+            <input type="text" placeholder="¿Qué estás buscando?">
+        </div>
+    </header>
+
+    <section class="filtro">
+        <button>Filtrar & Ordenar</button>
+    </section>
+
+    <section class="contenedor-productos">
+        
+
+    <div class="producto">
+        <img src="img/Imagen 2.jpeg" width="200" height="150">
+        <h3>CARTERA AUGUSTA</h3>
+        <p class="precio">$129.010</p>
+    </div>
+
+    <div class="producto">
+        <img src="img/imagen 5.jpeg">
+        <h3>REMERA CLARA</h3>
+        <p class="precio">$89.010</p>
+    </div>
+
+    <div class="producto">
+        <img src="img/imagen 1.jpeg">
+        <h3>CAMPERA DE JEAN ELIZABETH</h3>
+        <p class="precio">$110.010</p>
+    </div>
+
+    <div class="producto">
+        <img src="img/imagen 6.jpeg">
+        <h3>ZUECOS MATILDA</h3>
+        <p class="precio">$90.100</p>
+    </div>
+
+    <div class="producto">
+         <img src="img/imagen 10.jpeg">
+         <h3>BOTAS MARTA</h3>
+         <p class="precio">$200.000</p>
+    </div>
+    
+    <div class="producto">
+         <img src="img/imagen 11.jpeg" width="200" height="150">
+         <h3>CHAQUETA CLAIRE</h3>
+         <p class="precio">$220.000</p>
+    </div>
+
+    <div class="producto">
+         <img src="img/imagen 12.jpeg" width="200" height="150">
+         <h3>CONJUNTO BETSY</h3>
+         <p class="precio">$250.000</p>
+    </div>
+
+    <div class="producto">
+        <img src="img/imagen 13.jpeg" width="200" height="150">
+        <h3>MUSCULOSA ESCARLATA</h3>
+        <p class="precio">$80.000</p>
+    </div>
+
+    <div class="producto">
+         <img src="img/imagen 14.jpeg" width="200" height="150">
+         <h3>CONJUNTO ODETTE</h3>
+         <p class="precio">$130.000</p>
+    </div>
+
+    <div class="producto">
+         <img src="img/imagen 15.jpeg" width="200" height="150">
+         <h3>REMERA AKIRA</h3>
+         <p class="precio">$60.000</p>
+    </div>
+    
+    <div class="producto">
+        <img src="img/Imagen 7.jpeg" width="200" height="150">
+        <h3>CONJUNTO KIRSTEN</h3>
+        <p class="precio">$140.000</p>
+    </div>
+    
+    <div class="producto">
+        <img src="img/Imagen 9.jpeg" width="200" height="150">
+        <h3>MUSCULOSA ESMERALDA</h3>
+        <p class="precio">$84.999</p>
+    </div>
+
+    <div class="producto">
+        <img src="img/imagen 20.jpeg" witdh="200" height="150">
+        <h3>VESTIDO MARTINA</h3>
+        <p class="precio">$72.999</p>
+    </div>
+
+    <div class="producto">
+        <img src="img/imagen 18.jpeg" witdh="200" height="150">
+        <h3>JEAN MIA</h3>
+        <p class="precio">$69.999</p>
+    </div>
+
+    <div class="producto">
+        <img src="img/imagen 19.jpeg" witdh="200" height="150">
+        <h3>BIKINI RUTH</h3>
+        <p class="precio">$54.999</p>
+    </div>
+    
+    <div class="producto">
+        <img src="img/imagen 21.jpeg" witdh="200" height="150">
+        <h3>CARTERA CATHERINE</h3>
+        <p class="precio">$220.000</p>
+    </div>
+
+    <div class="producto">
+        <img src="img/imagen 22.jpeg" witdh="200" height="150">
+        <h3>GAFAS DE SOL EMMA</h3>
+        <p class="precio">$159.000</p>
+    </div>
+
+    <div class="producto">
+        <img src="img/imagen 23.jpeg" witdh="200" heigth="150">
+        <h3>SANDALIAS MILLA</h3>
+        <p class="precio">$189.999</p>
+    </div>
+
+    <div class="producto">
+        <img src="img/imagen 24.jpeg" width="200" height="150">
+        <h3>CARTERA GISELLE</h3>
+        <p class="precio">$65.000</p>
+    </div>
+
+    <div class="producto">
+        <img src="img/imagen 28.jpeg" width="200" height="150">
+        <h3>GUILLERMINAS JULIA</h3>
+        <p class="precio">$240.000</p>
+    </div>
+    </section>
+    
+
+
+    <section class="publicidad">
+
+        <div class="card">
+            <img src="img/imagen 31.jpeg">
+            
+        </div>
+    
+        <div class="card">
+            <img src="img/imagen 32.jpeg">
+                 
+            </div>
+        </div>
+    
+        <div class="card">
+            <img src="img/imagen 33.jpeg">
+            
+        </div>
+    
+    </section>
+
+    <footer class="footer">
+
+    <div class="footer-container">
+
+      
+      <div class="newsletter">
+        <h2>Anastasia</h2>
+        <p>Mantente al tanto y registrate en el boletín de Newsletter</p>
+
+        <div class="input-box">
+          <input type="email" placeholder="Tu dirección de correo electrónico">
+          <button>→</button>
+        </div>
+        </div>
+
+      
+      <div class="footer-col">
+        <h3>CONTACTO</h3>
+        <p>LOCALES</p>
+        <p>TEL (+54) 9 11 6590-4065</p>
+        <p>ATENCION AL PUBLICO</p>
+        <p>VENTAS POR MAYOR</p>
+        <p>RRHH</p>
+      </div>
+
+      
+      <div class="footer-col">
+        <h3>CATEGORIAS</h3>
+        <p>REBAJAS</p>
+        <p>AW26</p>
+        <p>CAMPAÑA</p>
+      </div>
+
+      
+      <div class="footer-col">
+        <h3>REDES SOCIALES</h3>
+        <p>FACEBOOK</p>
+        <p>INSTAGRAM</p>
+        <p>YOUTUBE</p>
+        <p>TWITTER</p>
+      </div>
+      </div>
+
+    <div class="footer-bottom">
+      <p>©Anastasia Inc. All Rights Reserved 2026</p>
+      <p>Terms & Conditions</p>
+    </div>
+
+    </footer>
+    </body>
+</html>
+
+
+<style>
+  .imagen-pequeña {
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+.header {
+  background: #d96aa7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.header nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.logo {
+  font-family: cursive;
+  font-size: 24px;
+}
+
+.btn {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+
+.footer {
+  background: #e9e9e9;
+  padding: 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+.newsletter {
+  flex: 2;
+  max-width: 350px;
+
+}
+
+.newsletter h2 {
+  font-family: cursive;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  margin-bottom: 20px;
+}
+
+.input-box {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.input-box input {
+  border: none;
+  padding: 10px;
+  flex: 1;
+  outline: none;
+}
+
+.input-box button {
+  background: #1a0033;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+
+.footer-bottom {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #aaa;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.publicidad {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 50px 30px;
+    flex-wrap: nowrap;
+}
+
+.publicidad .card {
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.publicidad .card img {
+    width: 500px;
+    height: 600px;
+    object-fit: contain;
+    display: block;
+}
+
+
+</style>
+
+  
+
